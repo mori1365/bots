@@ -176,6 +176,31 @@
     to {transform: scale(1.5, 1.5);}
     }
 
+.container{
+    width: 100%;
+    text-align: center;
+}
+.box{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.box img{
+    width: 500px;
+}
+.text li{
+    list-style: none;
+}
+.text a{
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 40px;
+    transition: all 0.6s ease;
+}
+.text a:hover{
+    color: #2c3e50;
+}
 
 
 
