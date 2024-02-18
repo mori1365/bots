@@ -13,7 +13,7 @@
 <style>
     .banner{
         width: 100%;
-
+        position: relative;
     }
     .banner img{
         width: 100%;
@@ -21,7 +21,7 @@
     .banner h1{
         position: absolute;
         left: 7%;
-        top: 50%;
+        bottom: 40px;
         color: transparent;
         -webkit-text-stroke: 1px #fff ;
         font-size:120px;
@@ -89,6 +89,17 @@
     iframe{
         width: 95%;
         height: 100vh;
+    }
+    @media (max-width:800px){
+        .banner h1{
+            font-size: 100px;
+        }
+    }
+    @media (max-width:600px){
+        .banner h1{
+            font-size: 70px;
+
+        }
     }
 </style>
 <body>
