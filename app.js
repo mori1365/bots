@@ -60,3 +60,37 @@ function slidefun(n) {
 	myslide[counter - 1].style.display = "block";
 	dot[counter - 1].className += " active";
 }
+
+
+$('.owl-carousel').owlCarousel({
+	items:3,
+	loop:true,
+	center:true,
+	margin:10,
+	URLhashListener:true,
+	autoplay:true,
+	nav:true,
+	startPosition: 'URLHash',
+	responsive:{
+		0:{
+			items:1
+		},
+		600:{
+			items:3
+		},            
+		960:{
+			items:5
+		},
+		1200:{
+			items:6
+		}
+	}
+  });
+  owl.on('mousewheel', '.owl-stage', function (e) {
+	if (e.deltaY>0) {
+		owl.trigger('next.owl');
+	} else {
+		owl.trigger('prev.owl');
+	}
+	e.preventDefault();
+  });
