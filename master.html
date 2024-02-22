@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,43 +8,47 @@
     <link rel="stylesheet" href="./font.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./img/favicon.png">
-    <link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <style>
-    .banner{
+    .banner {
         width: 100%;
         position: relative;
     }
-    .banner img{
+
+    .banner img {
         width: 100%;
     }
-    .banner h1{
+
+    .banner h1 {
         position: absolute;
         left: 7%;
         bottom: 40px;
         color: transparent;
-        -webkit-text-stroke: 1px #fff ;
-        font-size:120px;
+        -webkit-text-stroke: 1px #fff;
+        font-size: 120px;
         background-image: url(./img/back.png);
         background-position: 0 0;
         -webkit-background-clip: text;
         animation: back 20s linear infinite;
         z-index: 40;
     }
+
     @keyframes back {
-        100%{
+        100% {
             background-position: 2000px 0;
         }
     }
-    .master{
+
+    .master {
         display: flex;
         flex-wrap: wrap;
-        width: 100%;
-        justify-content: space-around;
-        gap: 20px;
+        gap: 15px;
+        justify-content: center;
+        padding: 10px;
     }
-    .boxes{
+
+    .boxes {
         width: 400px;
         height: 400px;
         padding: 10px;
@@ -55,30 +60,35 @@
         text-align: center;
         background-color: darkcyan;
     }
-    .caption{
+
+    .caption {
         text-align: center;
         margin-bottom: 30px;
     }
-    marquee{
+
+    marquee {
         font-size: 60px;
         font-weight: bold;
         font-family: Asiatech;
     }
-    .caption h4{
+
+    .caption h4 {
         font-size: 25px;
     }
-    .fullbox{
+
+    .fullbox {
         position: fixed;
         width: 100%;
         height: 100vh;
         top: 0;
-        left:100%;
+        left: 100%;
         text-align: center;
-        background: rgba(0,0,0,.4);
+        background: rgba(0, 0, 0, .4);
         transition: all .6s ease;
         z-index: 1500;
     }
-    .closes{
+
+    .closes {
         position: absolute;
         top: 15px;
         right: 15px;
@@ -86,26 +96,30 @@
         font-size: 50px;
         cursor: pointer;
     }
-    iframe{
+
+    iframe {
         width: 95%;
         height: 100vh;
     }
-    @media (max-width:800px){
-        .banner h1{
+
+    @media (max-width:800px) {
+        .banner h1 {
             font-size: 100px;
         }
     }
-    @media (max-width:600px){
-        .banner h1{
+
+    @media (max-width:600px) {
+        .banner h1 {
             font-size: 70px;
 
         }
     }
 </style>
+
 <body>
     <div class="header">
         <div class="logo">
-            <img src="./img/apple-touch-icon.png" alt="Logo"/>
+            <img src="./img/apple-touch-icon.png" alt="Logo" />
         </div>
         <div class="navbar">
             <a href="./index.html">خانه</a>
@@ -116,7 +130,7 @@
         </div>
         <div id="menu"><i class='bx bx-menu'></i></div>
     </div>
-    
+
     <div class="banner">
         <img src="./img/events-1.jpg" alt="">
         <h1>MASTER</h1>
@@ -142,13 +156,14 @@
         let fullbox = document.querySelector(".fullbox");
         let closes = document.querySelector(".closes");
         let iframe = document.querySelector("iframe");
-        function  fullscreen(url) {
-            fullbox.style.left=0;
-            iframe.src=url;
+        function fullscreen(url) {
+            fullbox.style.left = 0;
+            iframe.src = url;
         }
         closes.onclick = () => {
-            fullbox.style.left="100%";
+            fullbox.style.left = "100%";
         }
     </script>
 </body>
+
 </html>
