@@ -114,6 +114,49 @@
 
         }
     }
+    .slides{
+        height: 250px;
+        position: relative;
+        margin: auto;
+        width: 90%;
+        display: grid;
+        place-items: center;
+        overflow: hidden;
+    } 
+    .track{
+        display: flex;
+        width: calc(250px * 16);
+        animation: scroll 40s linear infinite;
+        
+    }
+    @keyframes scroll{
+        0%{
+            transform: translateX(0);
+        }
+        100%{
+            transform: translateX(calc(-250px * 8));
+        }
+    }
+    .track:hover{
+        animation-play-state: paused;
+    }
+    .slidem{
+        height: 200px;
+        width:600px;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        perspective: 100px;
+ 
+    }
+    .slidem img{
+        width: 600px;
+        height: 250px;
+        transition: all 1s ease;
+    }
+    .slidem img:hover{
+        transform: translateZ(20px);
+    }
 </style>
 
 <body>
@@ -150,6 +193,21 @@
     <div class="fullbox">
         <iframe src="" frameborder="0"></iframe>
         <div class="closes">&times;</div>
+    </div>
+
+
+    <!-- carousel -->
+    <div class="slides">
+        <div class="track">
+            <div class="slidem"><img src="./img/members/dd1ae68e568b2ad697d0235f80bf6224.jpg" alt=""></div>
+            <div class="slidem"><img src="./img/members/featured-members-1.jpeg" alt=""></div>
+            <div class="slidem"><img src="./img/members/featured-members-2.jpeg" alt=""></div>
+            <div class="slidem"><img src="./img/members/featured-members-3.jpeg" alt=""></div>
+            <div class="slidem"><img src="./img/members/featured-members-4.jpg" alt=""></div>
+            <div class="slidem"><img src="./img/members/member-1.jpg" alt=""></div>
+            <div class="slidem"><img src="./img/members/member-2.jpg" alt=""></div>
+            <div class="slidem"><img src="./img/members/member-3.jpg" alt=""></div>
+        </div>
     </div>
     <script src="./app.js"></script>
     <script>
