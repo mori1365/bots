@@ -267,13 +267,13 @@ border: 5px solid #fff;
 border-radius: 5px;
 width: 750px;
 object-fit: cover;
-animation: dd .5s ;
+animation: dd 1s ;
 }
 @keyframes dd{
-    0%{
+   from{
         opacity: 0;
     }
-    100%{
+    to{
         opacity: 1;
     }
 }
